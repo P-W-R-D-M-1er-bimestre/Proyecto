@@ -3,33 +3,45 @@
 <head>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="estilos.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Hurricane&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="https://site-assets.fontawesome.com/releases/v6.1.1/css/all.css"/>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Cabin&family=Fira+Sans:wght@100&family=Hurricane&display=swap" rel="stylesheet">
 	<title>Recetas de cocina</title>
 </head>
+	
 <body>
 <header>
-	<p class="logo">Logo</p>
-	<a class="publicar" href="#"><h3>Publica tu receta</h3></a>
-	<a class="inicio" href="index.html">inicio</a>
+	<nav>
+		<p class="logo">Recetas</p>
+		<a class="inicio" href="index.html"><i class="fa-solid fa-house"></i>INICIO</a>
+		<a class="publicar" href="#"><i class="fa-regular fa-bowl-hot"></i>PUBLICA TU RECETA</a>
+	</nav>
 </header>
-
+	
 <article>
-	<div>
+	<section class="recomendaciones">
 		<a href="#">
-		<h2>Nombre de receta</h2>
-		<h4>Tiempo aprox 20-30min</h4>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod<br>
-		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam<br></p>
-		<img src="comida.jpg">
+			<div class="recomendaciones_descripcion">
+				<h2 class="nombre_receta">ALBÓNDIGAS DE ALBARICOQUE</h2>
+				<p class="descripcion">Un postre tradicional de Alemania que no requiere de horno y que se consume en Austria, principalmente en la región de Wachau y Venosta, donde se les conoce con el nombre de “Marillenknödeln” y en Alemania como “Aprikosenknödeln” si son rellenos de albaricoques.</p>
+			</div>
+		<img src="comida.jpg" class="imgcomida">
 		</a>
-	</div>	
+	</section>	
 
 	<div>
-		<a href="paises/chile/chile.html"><img src="chile.jpg"></a>	
-		<a href="paises/argentina/argentina.html"><img src="argentina.jpg"></a>		
-		<a href="paises/bolivia/bolivia.html"><img src="paraguay.jpg"></a>	
+		<a href="paises/chile/chile.html"><img src="chile.jpg" class="imagen"></a>	
+		<a href="paises/argentina/argentina.html"><img src="argentina.jpg" class="imagen"></a>
+		<a href="paises/bolivia/bolivia.html"><img class="imagen" src="paraguay.jpg"></a>	
 	</div>
 
-	<div>
+	<div class="comidas">
 		<a href="#"><img src="comida-1.jpg"></a>
 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
 		<a href="#"><img src="comida-2.jpg"></a>

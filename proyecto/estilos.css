@@ -11,13 +11,9 @@ body{
 /*CABECERA*/
 header {
 	background-color: #154360;
-	box-shadow: 2px 2px 5px #999; /*Estructura: eje x,eje y,tamaño del desenfoque, border (aunque generlamente es cero y si no lo poner por defecto es cero),color*/
+	box-shadow: 2px 2px 5px #999;
 	font-size: 0px;
 	position: relative;
-	/*position: fixed;*//*para cabecera fija*/
-	/*padding-right: 989px;*//*para cabecera fija*/
-	/*margin: -30px;*/ /*para cabecera fija*/
-	/*margin-left: 0px;*//*para cabecera fija*/
 }
 
 header .logo{
@@ -42,7 +38,7 @@ header .publicar{
 header .inicio{
 	font-size: 15px;
 	font-family: Century Gothic;
-	font-weight: bold; /*agruesar las letras*/
+	font-weight: bold;
 	color:white;
 	padding: 5px;
 	text-decoration: 0px;
@@ -53,7 +49,7 @@ header .inicio{
 	display: inline;
 }
 
-header .fa-regular.fa-bowl-hot{ /*alinear*/
+header .fa-regular.fa-bowl-hot{
 	color: white;
 	float: right;
 	margin-top: 1px;
@@ -61,7 +57,7 @@ header .fa-regular.fa-bowl-hot{ /*alinear*/
 	display: inline;
 }
 
-header .fa-solid.fa-house{ /*alinear*/
+header .fa-solid.fa-house{
 	color: white;
 	float: right;
 	margin-top: 1px;
@@ -104,7 +100,7 @@ article .recomendaciones{
 
 article .recomendaciones_descripcion{
 	background-color: yellow;
-	position: absolute; /*me ayuda a que nuestra caja se ajuste a su contenido y no ocupa toda la linea*/
+	position: absolute;
 	top: 140px;
 	margin-left: 120px; 
 	width: 500px;

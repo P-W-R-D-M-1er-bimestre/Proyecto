@@ -5,13 +5,19 @@
 body{
 	font-family: sans-serif; 
 	background-color: #D4E6F1;
+	/*padding-top: 30px;*/ /*para cabecera fija*/
 }
 
+/*CABECERA*/
 header {
 	background-color: #154360;
-	box-shadow: 2px 2px 5px #999;
+	box-shadow: 2px 2px 5px #999; /*Estructura: eje x,eje y,tamaño del desenfoque, border (aunque generlamente es cero y si no lo poner por defecto es cero),color*/
 	font-size: 0px;
 	position: relative;
+	/*position: fixed;*//*para cabecera fija*/
+	/*padding-right: 989px;*//*para cabecera fija*/
+	/*margin: -30px;*/ /*para cabecera fija*/
+	/*margin-left: 0px;*//*para cabecera fija*/
 }
 
 header .logo{
@@ -30,35 +36,66 @@ header .publicar{
 	text-decoration: 0px; 
 	float:right;
 	margin: 5px;
+	padding-top: 8px;
+	display: inline;
 }
-
 header .inicio{
 	font-size: 15px;
 	font-family: Century Gothic;
-	font-weight: bold;
+	font-weight: bold; /*agruesar las letras*/
 	color:white;
 	padding: 5px;
-	text-align: right;
 	text-decoration: 0px;
-	text-align: right;
+	/*text-align: right;*/
 	float:right;
 	margin:5px;
+	padding-top: 8px;
+	display: inline;
 }
 
-header .fa-regular.fa-bowl-hot{
-	margin-right: 10px;
+header .fa-regular.fa-bowl-hot{ /*alinear*/
+	color: white;
+	float: right;
+	margin-top: 1px;
 	font-size: 15px;
+	display: inline;
 }
 
-header .fa-solid.fa-house{
-	margin-right: 10px;
-	font-size: 15px;	
+header .fa-solid.fa-house{ /*alinear*/
+	color: white;
+	float: right;
+	margin-top: 1px;
+	font-size: 15px;
+	display: inline;
 }
 
+header .caja_inicio{
+    display: table-cell;
+    float: right;
+    padding-left: 1px;
+    padding-right: 1px;
+    transition: background .5s;
+	border-radius: 5px;
+}
+header .caja_publicar{
+    display: table-cell;
+    float: right;
+    padding-left: 1px;
+    padding-right: 1px;
+    transition: background .5s;
+	border-radius: 5px;
+}
+
+header .caja_inicio:hover,.caja_publicar:hover{
+	background-color: #4276A7;
+}
+
+
+/*SECCION 1 RECOMENDACIONES DE RECETAS*/
 article a {
 	text-decoration: 0px;
 }
-article section {
+article .recomendaciones{
 	text-align: center;
 	background-color: white;
 	position: relative;
@@ -67,35 +104,138 @@ article section {
 
 article .recomendaciones_descripcion{
 	background-color: yellow;
-	position: absolute;
+	position: absolute; /*me ayuda a que nuestra caja se ajuste a su contenido y no ocupa toda la linea*/
 	top: 140px;
-	margin-left: 60px; 
+	margin-left: 120px; 
 	width: 500px;
 }
-
 article .imgcomida{
-	height:450px;
-	width:550px;
+	height:370px;
+	width:470px;
 	border-radius: 20px;
-	margin-left: 690px;
+	margin-left: 600px;
 	margin-top: 20px;
 	margin-bottom: 20px;
-
 }
+
 article .nombre_receta{
 	font-family: 'Cabin';
 	color: black;
-
 }
 article .descripcion{
 	display: inline;
 	margin-left: 50px;
-	color:#85929E;
+	color:#58636D;
 }
 
+/*ANIMACIONES DE FLECHAS*/
+.flecha1{
+width: 500px;
+right: 580px;
+margin:0 auto;
+position: relative;
+transform: rotate(90deg);
+}
+.flecha2{
+width: 0px;
+right: 0px;
+margin:0 auto;
+position: relative;
+transform: rotate(-90deg);
+left: 580px;
+bottom:240px;
+}
+
+.animatedColor {
+color: black;
+}
+.flecha {
+animation: arrow 1s ease-in-out infinite;
+font-size:20px;
+}
+.flecha:hover{
+animation:arrow 1s ease-out infinite !important;
+color:#229bf4;
+}
+@keyframes arrow {
+0% {
+transform: translate(0px, 50px);
+}
+50% {
+transform: translate(0px, 60px);
+}
+100% {
+transform: translate(0px, 50px);
+}
+}
+
+
+/*SECCION 2 BANDERAS*/
+article .paises{
+	background-color: red;
+	margin: 0px;
+	padding: 0px;
+}
 article .imagen{
 	height:150px;
 	width:250px;
 	border: 2px solid black;
-	margin-top: 400px;
+	margin:10px;
 }
+
+
+
+
+/*RESPONSIVE*/
+@media screen and (max-width: 480px){
+	header{
+	width: 100%;	
+	}
+	header .logo{
+	font-size: 23px;
+	display: inline;
+	padding-bottom: 10px;
+	}
+	header .publicar{
+	font-size: 10px;
+	text-decoration: 0px; 
+	padding-top : 2px;
+	margin-right: 10px;
+	display: inline;
+	}
+	header .inicio{
+	font-size: 10px;
+	padding-top : 2px;
+	margin-right: 80px;
+	display: inline;
+	}
+	/*SECCION 1 RECOMENDACIONES DE RECETAS*/
+article section {
+	width: 415px;
+	height: 300px;
+}
+
+article .recomendaciones_descripcion{
+	top: 50px;
+	margin-left: 50px; 
+	width: 200px;
+}
+
+article .imgcomida{
+	height:370px;
+	width:470px;
+	border-radius: 20px;
+	margin-left: 600px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+
+article .nombre_receta{
+	font-size: 10px;
+}
+
+article .descripcion{
+	font-size: 8px;
+}
+

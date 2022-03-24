@@ -5,7 +5,6 @@
 body{
 	font-family: sans-serif; 
 	background-color: #D4E6F1;
-	/*padding-top: 30px;*/ /*para cabecera fija*/
 }
 
 /*CABECERA*/
@@ -52,7 +51,7 @@ header .inicio{
 header .fa-regular.fa-bowl-hot{
 	color: white;
 	float: right;
-	margin-top: 1px;
+	margin-top: 0px;
 	font-size: 15px;
 	display: inline;
 }
@@ -97,9 +96,19 @@ article .recomendaciones{
 	position: relative;
 	z-index: -1;
 }
+article .portada_atras{
+	position: relative;
+	position: absolute;
+	left: -6px;
+	top: -5px;
+	width: 1359px;
+	height: 424px;
+	z-index: -2;
+	filter: blur(10px);
+}
 
 article .recomendaciones_descripcion{
-	background-color: yellow;
+	/*background-color: yellow;*/
 	position: absolute;
 	top: 140px;
 	margin-left: 120px; 
@@ -116,12 +125,12 @@ article .imgcomida{
 
 article .nombre_receta{
 	font-family: 'Cabin';
-	color: black;
+	color: white;
 }
 article .descripcion{
 	display: inline;
 	margin-left: 50px;
-	color:#58636D;
+	color:white;
 }
 
 /*ANIMACIONES DE FLECHAS*/
